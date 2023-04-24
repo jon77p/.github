@@ -1,4 +1,5 @@
 ---
+name: Template Sync
 on:
   # cronjob trigger
   schedule:
@@ -7,8 +8,9 @@ on:
   workflow_dispatch:
 jobs:
   repo-sync:
+    # Only run on non-template repos
+    if: github.repository != 'jon77p/template'
     runs-on: ubuntu-latest
-
     steps:
       # To use this repository's private action, you must check out the repository
       - name: Checkout
