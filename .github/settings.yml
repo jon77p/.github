@@ -62,28 +62,18 @@ branches:
         bypass_pull_request_allowances:
           users: []
           teams: []
-          apps: [
-            "renovate"
-          ]
+          apps:
+            - "renovate"
       # Required. Require status checks to pass before merging. Set to null to disable
       required_status_checks:
         # Required. Require branches to be up to date before merging.
         strict: false
         # Required. The list of status checks to require in order to merge into this branch
-        contexts: [
-          {
-            context: "CodeQL"
-          },
-          {
-            context: "GitGuardian Security Checks"
-          },
-          {
-            context: "dependency-review"
-          },
-          {
-            context: "njsscan code scanning"
-          }
-        ]
+        contexts:
+          - context: "CodeQL"
+          - context: "GitGuardian Security Checks"
+          - context: "dependency-review"
+          - context: "njsscan code scanning"
       # Required. Enforce all configured restrictions for administrators. Set to true to enforce required status checks for repository administrators. Set to null to disable.
       enforce_admins: true
       # Prevent merge commits from being pushed to matching branches
