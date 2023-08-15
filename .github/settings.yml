@@ -56,8 +56,6 @@ branches:
         # Blocks merge until code owners have reviewed.
         require_code_owner_reviews: true
         bypass_pull_request_allowances:
-          users: []
-          teams: []
           apps:
             - "renovate"
       # Required. Require status checks to pass before merging. Set to null to disable
