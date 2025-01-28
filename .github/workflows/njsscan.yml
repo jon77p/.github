@@ -67,6 +67,6 @@ jobs:
           args: ". --sarif --output results.sarif || true"
       - name: Upload njsscan report
         if: needs.check.outputs.enabled == 'true'
-        uses: github/codeql-action/upload-sarif@4e83f6b818d7c9f52143570963b2c7f7f055decb # v3
+        uses: github/codeql-action/upload-sarif@17a820bf2e43b47be2c72b39cc905417bc1ab6d0 # v3
         with:
           sarif_file: results.sarif
