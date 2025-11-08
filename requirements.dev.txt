@@ -1,4 +1,4 @@
-pre-commit==4.3.0
+pre-commit==4.4.0
 tartufo==5.0.2
 yamllint==1.37.1
 ansible==12.2.0
